@@ -1,9 +1,7 @@
 # veloxia/markup 
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/veloxia/markup.svg?style=flat-square)](https://packagist.org/packages/veloxia/markup)
-[![Build Status](https://img.shields.io/travis/veloxia/markup/master.svg?style=flat-square)](https://travis-ci.org/veloxia/markup)
-[![Quality Score](https://img.shields.io/scrutinizer/g/veloxia/markup.svg?style=flat-square)](https://scrutinizer-ci.com/g/veloxia/markup)
-[![Total Downloads](https://img.shields.io/packagist/dt/veloxia/markup.svg?style=flat-square)](https://packagist.org/packages/veloxia/markup)
+[![Build Status](https://img.shields.io/travis/veloxiadev/markup/master.svg?style=flat-square)](https://travis-ci.org/veloxiadev/markup)
 
 Some Schema.org generators made to be used with Laravel.
 

@@ -65,7 +65,7 @@ $markup
 echo $markup->json();
 
 // with blade you'll need to allow html
-// {!! $markup->json !!}
+// {!! $markup->json() !!}
 
 ```
 

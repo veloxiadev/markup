@@ -17,15 +17,23 @@ composer require veloxia/markup
 
 ### Laravel < 5.4
 
-Add service to  *config/app.php*
+Add to  *config/app.php*
 
 ``` php
 'providers' => [
-    
     ...
-    
-    Illuminate\Broadcasting\BroadcastServiceProvider::class,
+    Veloxia\Markup\MarkupServiceProvider::class,
+    ...
 ];
+
+'aliases' => [
+    ...
+    'Markup' => Veloxia\Markup\Facades::class,
+    ...
+];
+
+Veloxia\Markup\MarkupServiceProvider
+'
 ```
 
 ### Newer versions of Laravel

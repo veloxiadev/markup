@@ -1,5 +1,6 @@
 <?php
 
 return [
-    'minify_json' => env('MARKUP_MINIFY_JSON', false),
+
+    'pretty_json' => true,
 ];

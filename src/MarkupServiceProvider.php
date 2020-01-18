@@ -38,8 +38,8 @@ class MarkupServiceProvider extends ServiceProvider
         $this->mergeConfigFrom(__DIR__ . '/../config/config.php', 'veloxia');
 
         // Register the main class to use with the facade
-        $this->app->singleton('markup', function () {
-            return new Markup();
+        $this->app->singleton('markup', function ($app) {
+            return new Markup($app->config['veloxia']);
         });
     }
 }

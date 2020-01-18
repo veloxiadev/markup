@@ -4,21 +4,33 @@ namespace Veloxia\Markup;
 
 use Veloxia\Markup\Exception\UnknownMarkupSchemaException;
 
+/**
+ * This class is the "router" class that direct calls to the correct generator.
+ */
 class Markup
 {
 
     /**
      * The markup handler instance.
-     *
-     * @var mixed
      */
     protected $handler;
 
     /**
+     * Config.
+     */
+    public static $config = [];
+
+    /**
      * Constructs the markup class.
      */
-    public function __construct()
+    public function __construct($config = [])
     {
+        self::$config = $config;
+    }
+
+    public static function getConfig($key)
+    {
+        return @self::$config[$key] ?: null;
     }
 
     /**
@@ -38,16 +50,6 @@ class Markup
         $this->handler = new $model;
 
         return $this;
-    }
-
-    /**
-     * Dump the Array output of the generated class.
-     *
-     * @return array
-     */
-    public function dump(): array
-    {
-        return $this->handler->dumpCurrentState();
     }
 
     /**

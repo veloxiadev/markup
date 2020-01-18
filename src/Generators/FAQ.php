@@ -17,6 +17,7 @@ class FAQ extends MarkupGenerator
      */
     public function __construct(array $questions = [])
     {
+
         $this->model = new FAQPage;
 
         foreach ($questions as $question => $answer) {
@@ -39,6 +40,7 @@ class FAQ extends MarkupGenerator
 
         // create an empty answer and mark it as accepted
         $answer  = new Answer;
+
         $question->acceptedAnswer($answer);
         $this->model->mainEntity($question);
 
@@ -46,6 +48,11 @@ class FAQ extends MarkupGenerator
         if (is_null($answerText)) {
             $this->setDanglingItem("answer", $answer);
             return $this;
+        }
+
+        // otherwise set it
+        else {
+            $answer->text($answerText);
         }
     }
 

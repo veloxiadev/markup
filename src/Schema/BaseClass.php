@@ -9,9 +9,9 @@ abstract class BaseClass
 {
 
     /**
-     * The context.
+     * The context. By default, only the first dimension of the output array will have its context displayed, as long as the visibility is set to "protected".
      */
-    public $_context = "https://schema.org";
+    protected $_context;
 
     /**
      * Sets up the class with the correct "@type"
@@ -19,7 +19,8 @@ abstract class BaseClass
     public function __construct()
     {
         $path = explode('\\', get_called_class());
-        $this->_type = array_pop($path);
+        $this->setAttribute('_type', array_pop($path));
+        $this->setAttribute('_context', 'https://schema.org');
     }
 
     /**
@@ -42,6 +43,7 @@ abstract class BaseClass
      */
     protected function pushAttribute(string $attribute, $value)
     {
+
         // check if the variable exists, if not create array
         if (!isset($this->$attribute)) {
             $this->$attribute = [];
@@ -55,6 +57,7 @@ abstract class BaseClass
 
         // push and return
         array_push($this->$attribute, $value);
+
         return $this;
     }
 

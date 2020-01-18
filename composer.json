@@ -46,7 +46,7 @@
                 "Veloxia\\Markup\\MarkupServiceProvider"
             ],
             "aliases": {
-                "Markup": "Veloxia\\Markup\\MarkupFacade"
+                "Markup": "Veloxia\\Markup\\Facades\\Markup"
             }
         }
     }

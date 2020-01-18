@@ -5,7 +5,7 @@ namespace Veloxia\Markup\Tests;
 use __PHP_Incomplete_Class;
 use Orchestra\Testbench\TestCase;
 use Veloxia\Markup\MarkupServiceProvider;
-use Veloxia\Markup\MarkupFacade as Markup;
+use Veloxia\Markup\Facades\Markup as Markup;
 
 class FAQMarkupTest extends TestCase
 {

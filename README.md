@@ -26,17 +26,15 @@ Add to  *config/app.php*
 
 'aliases' => [
     ...
-    'Markup' => Veloxia\Markup\Facades::class,
+    'Markup' => Veloxia\Markup\Facades\Markup::class,
     ...
 ];
 
-Veloxia\Markup\MarkupServiceProvider
-'
 ```
 
 ### Newer versions of Laravel
 
-The service should be available by default. Otherwise try the procedure above.
+The Service Provider should be available automatically when the installation is complete. Otherwise try the procedure above.
 
 ## Usage
 

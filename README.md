@@ -1,4 +1,4 @@
-# Very short description of the package
+# Simple LD+JSON interface
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/veloxia/markup.svg?style=flat-square)](https://packagist.org/packages/veloxia/markup)
 [![Build Status](https://img.shields.io/travis/veloxia/markup/master.svg?style=flat-square)](https://travis-ci.org/veloxia/markup)
@@ -86,6 +86,20 @@ This will output something like:
     ]
 }
 </script>
+```
+
+It's also possible to bulk-insert:
+
+``` php
+// Just one Q/A pair at a time ...
+$markup->question("Question here", "Answer here")->json();
+
+// ... or a bigger array
+$faq = (new \Veloxia\Markup\Generators\FAQ([
+    "Question 1" => "Answer A",
+    "Question 2" => "Answer B",
+]))->json();
+
 ```
 
 ### Testing
